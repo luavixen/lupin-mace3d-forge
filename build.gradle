@@ -28,7 +28,7 @@ version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = mod_id
+    archivesName = mod_id + '-forge-' + minecraft_version
 }
 
 // Mojang ships Java 21 to end users in 1.20.5+, so your mod should target Java 21.
@@ -226,6 +226,9 @@ tasks.named('jarJar') {
     // ...
 }
 
+tasks.named('build') {
+    finalizedBy('jarJar')
+}
 
 // Example configuration to allow publishing using the maven-publish plugin
 publishing {

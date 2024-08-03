@@ -1,0 +1,3 @@
+[submodule "lupin-mace3d"]
+	path = lupin-mace3d
+	url = https://github.com/luavixen/lupin-mace3d
